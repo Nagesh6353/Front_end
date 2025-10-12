@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <table align="center" cellpadding="5">
+        <form action="">
+            <tr>
+                <td><label for="fullname">Enter Your Full Name:</label></td>
+                <td><input type="text" name="fullname" placeholder="Enter Your Full Name" pattern="[A-Za-z]{3,8}" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Enter Your Email:</label></td>
+                <td><input type="email" name="email" placeholder="Enter Your Email" pattern="[a-z0-9./]+@+[a-z]+.+[a-z]{2,3}$" required></td>
+            </tr>
+            <tr>
+                <td><label for="number">Enter Your Phone number:</label></td>
+                <td><input type="tel" name="number" maxlength="10" placeholder="Enter Your Phone number" pattern="[6789]+[0-9]{9}" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Select Your Subject:</label></td>
+                <td><select>
+                        <option value="">Front-End</option>
+                        <option value="">Back-End</option>
+                        <option value="">Full-Stack</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="message">Enter Your Message:</label></td>
+                <td><textarea name="message" maxlength="100"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+            </tr>
+
+
+        </form>
+    </table>
+</body>
+
+</html>

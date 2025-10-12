@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Play Video</h2>
+    <video style="width: 400px;" controls autoplay muted loop
+        src="https://www.youtube.com/watch?v=mNuhKUOD_A0&list=RDmNuhKUOD_A0&start_radio=1"></video>
+
+
+    <h2>Play Audio</h2>
+    <audio controls muted
+        src="/Assignment/Lab/audio/Deva Deva - Extended Film VersionBrahmāstraAmitabh BRanbir @aliabhatt@pritam7415 ArijitJonita.mp3"></audio>
+
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="150" style="border:1px solid #000;"></canvas>
+
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        ctx.fillStyle = "skyblue";
+        ctx.fillRect(30, 30, 100, 60);
+    </script>
+
+    <h2>svg</h2>
+    <svg width="200" height="150" style="border:1px solid #000;">
+        <circle cx="100" cy="75" r="40" fill="orange" stroke="red" stroke-width="3" />
+    </svg>
+
+
+</body>
+
+</html>
