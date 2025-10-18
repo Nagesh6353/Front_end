@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon"
+        href="https://images.pexels.com/photos/170809/pexels-photo-170809.jpeg?_gl=1*v45xpw*_ga*MTIxODE3NjYzNy4xNzUwODQxNDUz*_ga_8JE65Q40S6*czE3NTk1NTA4NjAkbzQkZzEkdDE3NTk1NTIzODUkajU0JGwwJGgw">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1><u>Student Registration Form</u></h1>
+    </div>
+
+    <div class="form-area">
+        <form action="">
+
+            <label for="">First Name:</label>
+            <input class="inp" type="text" name="" placeholder="Enter Your First Name" pattern="[A-Za-z]{3,6}" required><br>
+
+            <label for="">Last Name:</label>
+            <input class="inp" type="text" name="" placeholder="Enter Your Last Name" pattern="[A-Za-z]{3,6}" required><br>
+
+            <label for="">Email:</label>
+            <input class="inp" type="email" name="" placeholder="Enter Your Email" pattern="[a-z0-9./]+@+[a-z]+.+[a-z]{2,3}$" required><br>
+
+            <label for="">Mobile:</label>
+            <input class="inp" type="tel" name="" placeholder="only 10 digits are allowed" pattern="[6789]+[0-9]{9}" maxlength="10" required><br>
+
+            <label for="">Gender:</label>
+            <input class="gender" type="radio" name="gender" required>Male
+            <input class="gender" type="radio" name="gender" required>Female <br><br>
+
+            <label for="">Date of Birth:</label>
+            <input class="inp" type="date" required><br>
+
+            <label for="">Address:</label><br>
+            <textarea class="address" required></textarea><br>
+
+            <label for="">City:</label>
+            <input class="inp" type="text" name="" required><br>
+
+            <label for="">Area PIN:</label>
+            <input class="inp" type="text" name="" required><br>
+
+            <label for="">State:</label>
+            <input class="inp" type="text" name="" required><br>
+
+            <label for="">Qualification:</label>
+            <select name="" class="select">
+                <option value="">Select Qualification</option>
+                <option value="">Graduate</option>
+                <option value="">Post Graduate</option>
+            </select><br><br>
+
+            <label for="">Specialization:</label>
+            <input type="checkbox" name="" required>Computer Science <br>
+            <input class="check" type="checkbox" name="">Information Technology <br>
+            <input class="check" type="checkbox" name="">Computer Architecture <br>
+            <input class="check" type="checkbox" name="">Tele Communication <br><br>
+
+            <label for="">Password:</label>
+            <input class="inp" type="password" name="" placeholder="Enter Your Password" required><br>
+
+            <input id="submit" type="submit" value="Registered">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
