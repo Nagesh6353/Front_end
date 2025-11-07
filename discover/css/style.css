@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ultilies / reuse */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header {
+    background: url("/Images/Header.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20px 0px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav .logo {
+    width: 70px;
+}
+
+.ul-nav .li-nav {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.li-nav .nav-a {
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #003a3a;
+    font-weight: 700;
+    font-family: "Roboto Condensed";
+}
+
+.icons i {
+    color: #003a3a;
+    font-size: 23px;
+}
+
+.icons .bar {
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 0px;
+    font-family: "BioRhyme Expanded";
+}
+
+.header-content .header-h2 {
+    /* min,vw,max */
+    font-size: clamp(20px, 6.5vw, 58px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 800;
+
+}
+
+.header-content .header-h1 {
+    font-size: clamp(20px, 6.5vw, 58px);
+    text-transform: uppercase;
+    color: #003a3a;
+    font-weight: 800;
+}
+
+.header-content .header-p {
+    margin: 30px 0px;
+    font-size: 33px;
+    font-size: clamp(18px, 3.5vw, 33px);
+    color: #003a3a;
+    font-weight: 400;
+}
+
+.btn-header {
+    width: 250px;
+    font-size: clamp(18px, 3.5vw, 33px);
+    letter-spacing: 3px;
+    padding: 5px 30px;
+    color: #f5c4c3;
+    background-color: #003a3a;
+    font-weight: 300;
+    font-family: "Roboto";
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* sec1 start */
+#sec1 {
+    padding: 50px 0px;
+    background-color: #003a3a;
+}
+
+#sec1 .row {
+    display: flex;
+}
+
+#sec1 .row .col-6 {
+    width: 60%;
+}
+
+#sec1 .row .col-4 {
+    width: 40%;
+}
+
+.sec1-img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sec1-h1 {
+    width: 80%;
+    font-size: clamp(20px, 4.5vw, 42px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "BioRhyme Expanded";
+}
+
+.sec1-p {
+    font-size: clamp(18px, 3.5vw, 31px);
+    width: 70%;
+    margin: 40px auto;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.sec1-btn {
+    width: 130px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 50px;
+    border: 1px solid white;
+    color: white;
+}
+
+/* sec2 */
+#sec2 {
+    padding: 30px 0px;
+    background-color: #f5c4c3;
+}
+
+#sec2 .sec2-h1 {
+    font-size: clamp(20px, 4.5vw, 42px);
+    text-transform: uppercase;
+    color: #003a3a;
+    font-weight: 700;
+    font-family: "BioRhyme Expanded";
+    text-align: center;
+}
+
+#sec2 .sec2-p {
+    font-size: clamp(18px, 3.7vw, 33px);
+    color: #003a3a;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.make {
+    margin-top: 20px;
+}
+
+.make .row {
+    display: flex;
+}
+
+.make .row .col {
+    width: 33.33%;
+}
+
+.card .card-img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-content {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.card-content .card-h3 {
+
+    font-size: clamp(20px, 3.5vw, 29px);
+    color: #003a3a;
+    font-weight: 700;
+    font-family: "BioRhyme";
+}
+
+.card-content .card-p {
+    font-size: clamp(18px, 3.5vw, 25px);
+    color: #000000;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin: 20px 0px;
+}
+
+.card-content .card-a {
+
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #003a3a;
+    font-weight: 800;
+    font-family: "BioRhyme";
+}
+
+#sec3 {
+    background-color: #003a3a;
+}
+
+.sec3-content {
+    background: url("/Images/sec3bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+    height: 300px;
+}
+
+.sec3-h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "BioRhyme Expanded";
+    text-align: center;
+    filter: drop-shadow(0px 3px 50.5px rgba(0, 0, 0, 0.35));
+}
+
+.sec3-p {
+    font-size: 33px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-align: center;
+    filter: drop-shadow(0px 3px 50px rgba(0, 0, 0, 0.35));
+}
+
+.sec3-menu {
+    margin-top: -60px;
+    background: url("/Images/sec3shape.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+}
+
+.sec3-h2 {
+    font-size: 42px;
+    color: #003a3a;
+    font-weight: 400;
+    font-family: "BioRhyme Expanded";
+    text-align: center;
+}
+
+.sec3-menu {
+    padding: 50px 0px;
+
+}
+
+.sec3-ul {
+    margin: 50px 0px 0px 55px;
+}
+
+.sec3-menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+.sec3-item-h3 {
+    font-size: 25px;
+    color: #003a3a;
+    font-weight: 800;
+    font-family: "BioRhyme";
+}
+
+.sec3-item-p {
+    font-size: 16px;
+    color: #003a3a;
+    font-weight: 800;
+    font-family: "BioRhyme";
+}
+
+.sec3-menu-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: -85px;
+}
+
+.sec3-h3 {
+    font-size: 25px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-align: center;
+}
+
+.btn-book {
+    width: 201px;
+    height: 50px;
+    background-color: #003a3a;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #fffffe;
+    font-weight: 900;
+    font-family: "Roboto";
+    text-align: center;
+    margin: 40px auto;
+}
