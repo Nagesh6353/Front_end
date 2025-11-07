@@ -1,4 +1,17 @@
-@media only screen and (max-width:1160px) {}
+@media only screen and (max-width:1160px) {
+    .sec3-menu .row {
+        display: inline-block;
+    }
+
+    .sec3-menu .row .col {
+        width: 100%;
+    }
+
+    .sec3-li-content {
+        width: 100%;
+
+    }
+}
 
 @media only screen and (max-width:992px) {}
 
@@ -18,10 +31,12 @@
     .header-content {
         width: 100%;
     }
-    .make .row{
+
+    .make .row {
         display: block;
     }
-    .make .row .col{
+
+    .make .row .col {
         width: 70%;
         margin: 10px auto;
         box-shadow: 0 0 5px 5px gray;
@@ -36,7 +51,8 @@
     #sec1 .row .col-6 {
         width: 100%;
     }
-    .sec1-img{
+
+    .sec1-img {
         width: 100%;
     }
 
@@ -44,21 +60,25 @@
         width: 100%;
         padding: 20px 0px;
     }
+
     .sec1-h1 {
         width: 100%;
         text-align: center;
     }
-    .sec1-btn{
+
+    .sec1-btn {
         margin: 0 auto;
     }
-    .sec1-p{
+
+    .sec1-p {
         width: 100%;
         text-align: center;
         margin: 10px 0px;
     }
-     .make .row .col{
+
+    .make .row .col {
         width: 90%;
-        
+
     }
 
 }

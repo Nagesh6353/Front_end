@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #003a3a;
+}
+
 /* ultilies / reuse */
 .container {
     width: 90%;
@@ -216,105 +220,147 @@
 }
 
 #sec3 {
-    background-color: #003a3a;
-}
-
-.sec3-content {
     background: url("/Images/sec3bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 50px 0px;
-    height: 300px;
+    height: 400px;
+    padding: 20px 0px;
 }
 
-.sec3-h1 {
-    font-size: 42px;
+#sec3 .sec3-h1 {
+    font-size: clamp(20px, 4.5vw, 42px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
     font-family: "BioRhyme Expanded";
     text-align: center;
     filter: drop-shadow(0px 3px 50.5px rgba(0, 0, 0, 0.35));
+    margin: 40px 0px 0px 10px;
 }
 
-.sec3-p {
-    font-size: 33px;
+
+#sec3 .sec3-p {
+    font-size: clamp(18px, 3.5vw, 25px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Roboto";
     text-align: center;
     filter: drop-shadow(0px 3px 50px rgba(0, 0, 0, 0.35));
+    margin: 20px auto;
+    width: 60%;
 }
 
 .sec3-menu {
-    margin-top: -60px;
-    background: url("/Images/sec3shape.png");
+    background-image: url("/Images/sec3shape.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    margin: 70px 0px;
     padding: 40px 0px;
+
 }
 
-.sec3-h2 {
-    font-size: 42px;
+.sec3-menu-h2 {
+    font-size: clamp(20px, 6.5vw, 58px);
     color: #003a3a;
     font-weight: 400;
     font-family: "BioRhyme Expanded";
     text-align: center;
 }
 
-.sec3-menu {
-    padding: 50px 0px;
+.sec3-menu .row {
+    display: flex;
+}
+
+.sec3-menu .row .col {
+    width: 50%;
+}
+
+.sec3-li-content {
+    margin: 70px 70px;
 
 }
 
-.sec3-ul {
-    margin: 50px 0px 0px 55px;
+.sec3-li-content img {
+    float: left;
+    width: 50px;
 }
 
-.sec3-menu ul li {
+.sec3-ul .sec3-li {
+    font-size: clamp(16px, 3.5vw, 25px);
+    color: #003a3a;
+    font-weight: 800;
+    font-family: "BioRhyme";
     list-style: none;
-    display: inline-block;
-    padding: 20px 0px;
 }
 
-.sec3-item-h3 {
-    font-size: 25px;
+.sec3-span {
+    font-size: clamp(16px, 1.5vw, 20px);
     color: #003a3a;
     font-weight: 800;
     font-family: "BioRhyme";
 }
 
-.sec3-item-p {
-    font-size: 16px;
-    color: #003a3a;
-    font-weight: 800;
-    font-family: "BioRhyme";
-}
-
-.sec3-menu-img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    margin-left: -85px;
-}
-
-.sec3-h3 {
-    font-size: 25px;
+.sec3-menu .sec3-h3 {
+    font-size: clamp(20px, 3.5vw, 25px);
     color: #000000;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.sec3-menu .sec3-btn {
+    width: 170px;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    border: 1px solid white;
+    color: white;
+    background-color: #003a3a;
+}
+
+#sec4 {
+    background-color: #ffffff;
+    margin-top: 700px;
+}
+
+#sec4 .sec4-h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #f5c4c3;
+    font-weight: 700;
+    font-family: "BioRhyme Expanded";
+    text-align: center;
+}
+
+#sec4 .sec4-h3 {
+    font-size: 33px;
+    color: #003a3a;
     font-weight: 400;
     font-family: "Roboto";
     text-align: center;
 }
 
-.btn-book {
-    width: 201px;
-    height: 50px;
-    background-color: #003a3a;
-    font-size: 21px;
-    text-transform: uppercase;
-    color: #fffffe;
-    font-weight: 900;
-    font-family: "Roboto";
+.chefs {
+    margin-top: 20px;
+}
+
+.chefs .row {
+    display: flex;
+}
+
+.chefs .row .col {
+    width: 33.33%;
+    
+}
+.chefs .row .col .card{
+    margin: 30px 0px;
+}
+
+.chefs .card-img {
+    width: 60%;
+    margin: 0 auto;
+}
+.chefs .card-content{
     text-align: center;
-    margin: 40px auto;
 }
