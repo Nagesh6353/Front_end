@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* hides the unwanted horizontal scroll */
+}
+
+
+body {
+    background: #f0f4f8;
+    /* background: linear-gradient(135deg, #355C7D, #6C5B7B, #C06C84); */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header {
+    background: url("/images/header-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding: 20px 0px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo {
+    width: 150px;
+}
+
+.nav .nav-ul {
+    list-style: none;
+    margin-left: 80px;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+.nav-ul .nav-li a {
+    text-decoration: none;
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #000000;
+    font-weight: 700;
+    font-family: "Nunito";
+    text-align: center;
+}
+
+.icons .bar {
+    display: none;
+}
+
+.header-content {
+    margin: 50px 0px;
+}
+
+.header-content .header-h1 {
+    width: 400px;
+    font-size: clamp(16px, 5.5vw, 58px);
+    color: #000000;
+    font-weight: 700;
+    font-family: "Bitter";
+    padding: 10px 0px;
+}
+
+.header-content .header-p {
+    width: 310px;
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+/* Section 1 Css Start */
+
+.sec1-h1 {
+    width: 370px;
+    font-size: clamp(16px, 3.5vw, 33px);
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+    margin: 50px 0px 20px 0px;
+}
+
+.shape {
+    width: 80px;
+    height: 10px;
+    background-color: rgb(2, 255, 242);
+}
+
+.sec1-content {
+    margin: 50px 0px;
+}
+
+.sec1-content .row {
+    display: flex;
+}
+
+.sec1-content .row .col {
+    width: 33.33%;
+}
+
+.card .card-img {
+    width: 30%;
+    margin: 10px auto;
+}
+
+.card .card-h2 {
+    font-size: clamp(16px, 2.5vw, 25px);
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.card .card-p {
+    font-size: clamp(16px, 2.5vw, 25px);
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/* Section 1 Css End */
+
+/* Section 2 Css Start */
+
+#section2 {
+    margin-top: 150px;
+}
+
+.sec2-content .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec2-h1 {
+    width: 190px;
+    font-size: clamp(16px, 3.5vw, 33px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.sec2-h2 {
+    margin: 50px 0px 20px 0px;
+    font-size: clamp(16px, 3.5vw, 33px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.sec2-p {
+    width: 543px;
+    font-size: clamp(16px, 2.5vw, 25px);
+    letter-spacing: 2px;
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+}
+
+.line {
+    width: 531px;
+    height: 2px;
+    background-color: #000000;
+    border: 0.2px solid #0cc4df;
+    margin: 40px 0px;
+}
+
+.sec2-content .sec2-img img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sec2-h3 {
+    font-size: clamp(16px, 3.5vw, 33px);
+    text-transform: uppercase;
+    color: #fd5f00;
+    font-weight: 400;
+    margin: 30px auto;
+    width: 400px;
+}
+
+/* Section 2 Css End */
+
+/* Section 3 CSS Start */
+
+#section3 {
+    background: url("/images/Sec3-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20px 0px;
+}
+
+.sec3-h1 {
+    width: 780px;
+    font-size: clamp(16px, 4.5vw, 50px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 60px 0px;
+}
+
+.sec3-h2 {
+    width: 419px;
+    font-size: clamp(16px, 2.5vw, 25px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.sec3-p {
+    font-size: clamp(16px, 2.5vw, 21px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Bitter";
+    margin: 30px 0px;
+}
+
+.sec3-btn {
+    width: 120px;
+    height: 40px;
+    background: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0px 40px 0px;
+}
+
+/* Section 3 CSS End */
+
+/* Section 4 CSS Start */
+
+#section4 {
+    margin: 30px 0px;
+}
+
+.sec4-h1 {
+    width: 480px;
+    font-size: clamp(16px, 5.5vw, 42px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+    padding: 20px 0px;
+    margin: 30px 0px;
+}
+
+.sec4-content .row {
+    display: flex;
+}
+
+.sec4-content .row .col {
+    width: 33.33%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.sec4-content .card-img {
+    width: 300px;
+
+}
+
+.sec4-content .card-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sec4-content .card-h1 {
+    font-size: clamp(16px, 3.5vw, 33px);
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.sec4-content .card-p {
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+}
+
+.sec4-content .card-h3 {
+    font-size: clamp(16px, 2.5vw, 25px);
+    letter-spacing: 2px;
+    color: #1f262f;
+    font-weight: bold;
+    font-family: "Bitter";
+
+}
+
+.sec4-btn {
+    display: block;
+    margin: 30px auto;
+    width: 120px;
+    height: 40px;
+    color: #000000;
+}
+
+/* Section 4 CSS End */
+
+/* Section 5 Css Start */
+
+#section5 {
+    background: linear-gradient(135deg, #355C7D, #6C5B7B, #C06C84);
+    margin-top: 150px;
+}
+
+.sec5-content .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec5-content .row .col {
+    width: 50%;
+}
+
+.sec5-content .row .col1 {
+    text-align: center;
+}
+
+.sec5-content .row .col2 {
+    margin: 40px 0px 20px 30px;
+}
+
+.sec5-h1 {
+    width: 410px;
+    font-size: clamp(16px, 3.5vw, 33px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.sec5-h2 {
+    margin: 50px 0px 20px 0px;
+    font-size: clamp(16px, 3.5vw, 33px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.sec5-p {
+    width: 543px;
+    font-size: clamp(16px, 2.5vw, 25px);
+    letter-spacing: 2px;
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+}
+
+.sec5-content .sec5-img {
+    margin: 20px 60px 0px 0px;
+}
+
+.sec5-content .sec5-img img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sec5-h3 {
+    font-size: clamp(16px, 4.5vw, 33px);
+    text-transform: uppercase;
+    color: #fd5f00;
+    font-weight: 400;
+    margin: 30px auto;
+    width: 400px;
+}
+
+/* Section 5 Css End */
+
+/* Footer CSS Start */
+#footer {
+    padding: 50px 0px;
+}
+
+#footer .row {
+    display: flex;
+}
+
+#footer .row .footer-col {
+    width: 40%;
+}
+
+.footer-h1 {
+    font-size: clamp(16px, 2.5vw, 25px);
+    text-transform: uppercase;
+    color: #1f262f;
+    font-weight: 700;
+    font-family: "Bitter";
+}
+
+.footer-p {
+    margin: 30px 0px;
+    font-size: clamp(16px, 2.5vw, 21px);
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+}
+
+#footer .footer-logo {
+    width: 150px;
+    margin: 50px 0px;
+}
+
+.footer-h3 {
+    margin: 5px 0px;
+}
+
+#footer .row .footer-col1 {
+    width: 20%;
+    margin: 60px 0px 20px 70px;
+}
+
+#footer .row .footer-col1 .footer-ul {
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.footer-ul .footer-li {
+    font-size: clamp(16px, 1.5vw, 18px);
+    color: #1f262f;
+    font-weight: 400;
+    font-family: "Bitter";
+}
+
+/* Footer CSS End */
