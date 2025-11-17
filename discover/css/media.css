@@ -1,13 +1,14 @@
 @media only screen and (max-width:1160px) {
-    .sec3-menu .row {
-        display: inline-block;
+
+    #sec4 {
+        margin-top: 100%;
     }
 
-    .sec3-menu .row .col {
-        width: 100%;
+    .chefs .row {
+        display: block;
     }
 
-    .sec3-li-content {
+    .chefs .row .col {
         width: 100%;
 
     }

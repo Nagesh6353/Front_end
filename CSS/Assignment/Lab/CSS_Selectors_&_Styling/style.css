@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    color: rgb(255, 30, 0);
+}
+
+#form {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #acc8d7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+}
+
+#form label {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#form input,
+#form textarea {
+    width: 100%;
+    padding: 10px 0px;
+    padding-left: 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#name,
+#email,
+#message {
+    margin: 5px auto;
+}
+
+.form-btn {
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-btn:hover {
+    background-color: #6a0dad;
+}
