@@ -1,0 +1,20 @@
+@media only screen and (max-width:1160px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {
+    .nav .nav-ul li a {
+        display: none;
+    }
+
+    #sec1 .row {
+        display: block;
+    }
+
+    #sec1 .col {
+        width: 100%;
+        margin: 10px 0px;
+    }
+}
+
+@media only screen and (max-width:576px) {}

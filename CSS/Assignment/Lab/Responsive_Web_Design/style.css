@@ -3,11 +3,85 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.container{
+
+/* Header Part CSS Start */
+
+#header {
+    background: #ece4e4;
+}
+
+.container {
     width: 90%;
     margin: 0 auto;
 }
+
+.logo-h2 {
+    font-size: clamp(16px, 1.5vw, 25px);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
+
+.nav .nav-ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav .nav-ul li a {
+    text-decoration: none;
+    margin: 0px 30px;
+    font-size: clamp(16px, 1.5vw, 23px);
+    font-weight: bold;
+    color: black;
+}
+
+/* Header Part CSS End */
+
+/* Section 1 CSS Start */
+
+#sec1 {
+    padding: 20px;
+}
+
+#sec1 .row {
+    display: flex;
+}
+
+#sec1 .col {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #ece4e4;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.col-p,
+.col-h3 {
+    margin: 20px 0px;
+}
+
+.col-ul {
+    margin: 20px 20px;
+}
+
+/* Section 1 CSS End */
+
+/* Footer CSS Start */
+
+#foot {
+    padding: 20px;
+    background: #ece4e4;
+    text-align: center;
+}
+
+#foot .foot-p {
+    font-size: clamp(16px, 1.5vw, 18px);
+    font-weight: bold;
+    color: black;
+}
+
+/* Footer CSS End */
