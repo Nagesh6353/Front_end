@@ -1,0 +1,54 @@
+.login-card {
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    box-shadow: 0 8px 20px rgba(209, 206, 206, 0.2);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.logo-border {
+    border: 2px solid;
+    border-radius: 60px;
+    background: #1DA1F2;
+}
+
+.card-h2 {
+    text-align: center;
+}
+.input-group input{
+    border-radius: 10px;
+     box-shadow: inset 4px 4px 10px rgba(179, 163, 163, 0.2),
+                inset -4px -4px 10px rgba(255, 255, 255, 0.8);
+}
+
+.uname::placeholder {
+    font-weight: bold;
+    color: #333;
+}
+
+.pwd::placeholder {
+    font-size: 55px;
+    color: #333;
+}
+
+.login-btn {
+    display: block;
+    width: 260px;
+    border-radius: 17px;
+}
+
+.foot-link p {
+    text-align: center;
+}
+
+.foot-link .link {
+    text-decoration: none;
+}
