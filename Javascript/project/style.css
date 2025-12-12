@@ -1,9 +1,37 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background: rgb(248, 238, 240);
 }
-.container{
-    width: 90%;
-    margin: 0 auto;
+h1{
+    text-align: center;
+}
+.box {
+    text-align: center;
+    padding: 20px;
+}
+.box label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.box input{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.button-box {
+    text-align: center;
+}
+
+.button-box button {
+    padding: 12px 25px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.result {
+    text-align: center;
 }

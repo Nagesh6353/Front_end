@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="card">
-            <h1 class="card-h1">Simple Calculator</h1>
-        </div>
+    <div class="heading">
+        <h1>Calculator</h1>
     </div>
+    <div class="box">
+        <label for="Number1">Number1:</label>
+        <input type="text" placeholder="Enter your num1" name="Number1" id="num1">
+        <label for="Number2">Number2:</label>
+        <input type="text" placeholder="Enter your num2" name="Number2" id="num2">
+    </div>
+
+    <div class="button-box">
+        <button onclick="test()">Addition</button>
+        <button onclick="subtraction()">Subtraction</button>
+        <button onclick="multiplication()">Multiplication</button>
+        <button onclick="division()">Division</button>
+    </div>
+
+    <div class="result">
+        <h1 id="sum"></h1>
+        <h1 id="sub"></h1>
+        <h1 id="mul"></h1>
+        <h1 id="div"></h1>
+    </div>
+
+
+    <script>
+
+        let num1 = document.getElementById("num1");
+        console.log(num1);
+        let num2 = document.getElementById("num2");
+        console.log(num2);
+
+
+        // Addition
+        function test() {
+            let sum = parseInt(num1.value) + parseInt(num2.value);
+            console.log("sum =>", sum);
+            // document.writeln("sum =>",sum);
+            // document.getElementById("h1").innerHTML = "sum => "+sum;
+            document.getElementById("sum").innerHTML = `Addition => ${sum}`;
+        }
+
+        // Subtraction
+        function subtraction() {
+            let sub = parseInt(num1.value) - parseInt(num2.value);
+            console.log("sub =>", sub);
+            document.getElementById("sub").innerHTML = `subtraction => ${sub}`;
+        }
+
+        // Multiplication
+        function multiplication() {
+            let mul = parseInt(num1.value) * parseInt(num2.value);
+            console.log("mul =>", mul);
+            document.getElementById("mul").innerHTML = `Multiplication => ${mul}`;
+        }
+
+        // Devision
+        function division() {
+            let div = parseInt(num1.value) / parseInt(num2.value);
+            console.log("Div =>", div);
+            document.getElementById("div").innerHTML = `Division => ${div}`;
+        }
+
+    </script>
+
 </body>
+
 </html>
