@@ -1,13 +1,30 @@
-.logo{
+.logo {
     width: 150px;
 }
-.searchbar{
+
+.searchbar {
     width: 570px;
 }
-.dropdown{
+
+.dropdown {
     margin: 0 0 0 300px;
 }
-.nav-button{
+
+.nav-button {
     width: 80px;
     height: 30px;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.slider .card img {
+    cursor: pointer;
+}
+
+#sec5 {
+    background: #2c3b5d;
 }

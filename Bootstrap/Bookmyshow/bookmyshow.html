@@ -17,12 +17,13 @@
 </head>
 
 <body>
+    <!-- Header Start -->
     <header id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand">
                 <div class="container-fluid">
                     <div class="logo">
-                        <a href="#"><img src="/Bookmyshow/images/logo.png" height="100%" width="100%" alt=""></a>
+                        <a href="#"><img src="./images/logo.png" height="100%" width="100%" alt=""></a>
                     </div>
 
                     <form class="d-flex searchbar" role="search">
@@ -60,39 +61,407 @@
                 </div>
             </nav>
         </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 40px">
+        <nav class="navbar navbar-expand bg-body-tertiary" style="height: 40px">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="container">
-                    <div class="collapse navbar-collapse ms-3" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Stream</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Events</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Plays</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Sports</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#">Activities</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Stream</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Plays</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Sports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#">Activities</a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav nav-2">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="#">ListYourShow</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">Corporates</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">Offers</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark" href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Header End -->
+
+    <!-- Section 1 Start -->
+    <section id="sec1 mt-2">
+        <!-- Movie Carousel -->
+        <div class="container py-4">
+            <h3 class="mb-3 fw-bold ">Recommended Movies</h3>
+            <div id="moviecarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <!-- Slider 1 Start -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide1.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Kis Kisko Pyaar Karoon 2</h4>
+                                        <p class="card-text">Comedy/Drama/Romantic</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide2.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Dhurandhar</h4>
+                                        <p class="card-text">Action/Thriller</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide3.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Avatar:Fire and Ash</h4>
+                                        <p class="card-text">Action/Adventure/Fantasy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide4.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Laalo - Krishna Sada Sahaayate</h4>
+                                        <p class="card-text">Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide5.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Akhanda 2:Thaandavam</h4>
+                                        <p class="card-text">Action/Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slider 1 End -->
+
+                    <!-- Slider 2 Start -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide6.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Tere Ishk Mein</h4>
+                                        <p class="card-text">Drama/Romantic</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide7.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Sholay: The Final Cut</h4>
+                                        <p class="card-text">Action/Adventure/Comedy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide8.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Jeev</h4>
+                                        <p class="card-text">Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide9.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Zootopia 2</h4>
+                                        <p class="card-text">Action/Animation/Comedy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/slide10.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ajab Tarzan Ni Gajab Kahani</h4>
+                                        <p class="card-text">Adventure/Drama/Family</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slider 2 End -->
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#moviecarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#moviecarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Section 1 End -->
+
+    <!-- Section 2 Start -->
+    <section id="sec2">
+        <div class="container my-5">
+            <img src="./images/banner.avif" width="100%" height="100%" alt="">
+        </div>
+    </section>
+    <!-- Section 2 End -->
+
+    <!-- Section 3 Start -->
+    <section id="sec3">
+        <div class="container my-5">
+            <h3 class="mb-3 fw-bold ">The Best Of Live Events</h3>
+            <div class="slider">
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide1.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide2.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide3.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide4.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide5.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide6.avif" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 14rem;">
+                    <img src="./images/carousel2/slide7.avif" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 3 End -->
+
+    <!-- Section 4 Start -->
+    <section id="sec4">
+        <div class="container my-5">
+            <img src="./images/banner1.avif" width="100%" height="100%" alt="">
+        </div>
+    </section>
+    <!-- Section 4 End -->
+
+    <!-- Section 5 Start -->
+
+    <section id="sec5" class="p-5">
+        <div class="container">
+            <div class="premiere d-flex">
+                <i class="fa-solid fa-circle-play" style="color: #e33d3d; font-size: 80px;"></i>
+                <h2 class="text-white ms-3">PREMIERE</h2>
+            </div>
+            <p class="text-white" style="margin: -35px 0 0 118px;">Watch new movie at home, every Friday</p>
+
+            <div class="premiere1 mt-5">
+                <h2 class="text-white">Premieres</h2>
+                <p class="text-white" style="margin: 0 0 0 0px;">Brand new releases every Friday</p>
+            </div>
+
+            <!-- Section 5 Carousel Start -->
+            <div id="moviecarousel1" class="carousel slide mt-2" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <!-- Slider 1 Start -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide1.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Kis Kisko Pyaar Karoon 2</h4>
+                                        <p class="card-text">Comedy/Drama/Romantic</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide2.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Dhurandhar</h4>
+                                        <p class="card-text">Action/Thriller</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide3.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Avatar:Fire and Ash</h4>
+                                        <p class="card-text">Action/Adventure/Fantasy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide4.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Laalo - Krishna Sada Sahaayate</h4>
+                                        <p class="card-text">Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide5.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Akhanda 2:Thaandavam</h4>
+                                        <p class="card-text">Action/Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slider 1 End -->
+
+                    <!-- Slider 2 Start -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide6.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Tere Ishk Mein</h4>
+                                        <p class="card-text">Drama/Romantic</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide7.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Sholay: The Final Cut</h4>
+                                        <p class="card-text">Action/Adventure/Comedy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide8.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Jeev</h4>
+                                        <p class="card-text">Drama</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide9.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Zootopia 2</h4>
+                                        <p class="card-text">Action/Animation/Comedy</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="card" style="width: 15rem; height: 30rem;">
+                                    <img src="./images/carousel3/slide10.avif" height="350px" width="200px" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ajab Tarzan Ni Gajab Kahani</h4>
+                                        <p class="card-text">Adventure/Drama/Family</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Slider 2 End -->
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#moviecarousel1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#moviecarousel1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Section 5 Carousel End -->
+        </div>
+    </section>
+
+    <!-- Section 5 End -->
 </body>
 
 </html>

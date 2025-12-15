@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    body {
+        background: #f7f7f7;
+    }
+
+    .city-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .city-block {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .city-block:hover {
+        opacity: 0.8;
+    }
+
+    .modal-content {
+        border-radius: 20px;
+    }
+
+    .location-btn {
+        cursor: pointer;
+        color: #d63031;
+        font-weight: 500;
+    }
+</style>
+</head>
+
+<body class="bg-light">
+
+    <!-- ===================== NAVBAR 1 ====================  -->
+    <nav class="navbar navbar-expand-lg bg-white py-2 shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="img/OIP.jpeg" height="60">
+            </a>
+
+            <!-- Search Bar Modal Trigger -->
+            <form class="d-flex mx-4 flex-grow-1">
+                <input class="form-control" type="search" placeholder="Search Movies, Events..." data-bs-toggle="modal"
+                    data-bs-target="#searchModal">
+            </form>
+
+            <div class="d-flex align-items-center">
+
+                <!-- Location Button -->
+                <button class="btn btn-outline-danger me-3" data-bs-toggle="modal" data-bs-target="#locationModal">
+                    Ahmedabad ▼
+                </button>
+
+                <!-- Sign In Button -->
+                <button class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Sign In
+                </button>
+
+                <!-- Offcanvas Icon -->
+                <button class="btn border-0" data-bs-toggle="offcanvas" data-bs-target="#menuPanel">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ===================== NAVBAR 2 ===================== -->
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
+        <div class="container d-flex justify-content-between">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Movies</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Stream</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Events</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Plays</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Sports</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Activities</a></li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">ListYourShow</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Corporates</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Offers</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#">Gift Cards</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===================== SEARCH ===================== -->
+    <div class="modal fade" id="searchModal">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Trending Searches</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="text" class="form-control mb-3"
+                        placeholder="Search Movies, Events, Plays, Sports and Act...">
+
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="btn btn-outline-danger btn-sm">Movies</button>
+                        <button class="btn btn-outline-danger btn-sm">Stream</button>
+                        <button class="btn btn-outline-danger btn-sm">Events</button>
+                        <button class="btn btn-outline-danger btn-sm">Plays</button>
+                        <button class="btn btn-outline-danger btn-sm">Sports</button>
+                        <button class="btn btn-outline-danger btn-sm">Activities</button>
+                        <button class="btn btn-outline-danger btn-sm">venues</button>
+                        <button class="btn btn-outline-danger btn-sm">offers</button>
+                        <button class="btn btn-outline-danger btn-sm">others</button>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">Rajadhiraaj Yatra</li>
+                        <li class="list-group-item">Laalo - Krishna sada Sahaayate</li>
+                        <li class="list-group-item">Tere Ishk Mein</li>
+                        <li class="list-group-item">Dhurandhar</li>
+                        <li class="list-group-item">Ap Dhillon-one of one tour-ahm</li>
+                        <li class="list-group-item">De De Pyaar De 2</li>
+                        <li class="list-group-item">Zootopia 2</li>
+                        <li class="list-group-item">120 Bahadur</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SIGN IN  ===================== -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content p-3">
+
+                <div class="d-flex justify-content-between">
+                    <h4 class="mx-auto">Get Started</h4>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <button class="btn btn-outline-secondary w-100 my-2 d-flex align-items-center">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="22" class="me-2">
+                    Continue with Google
+                </button>
+
+                <button class="btn btn-outline-secondary w-100 my-2 d-flex align-items-center">
+                    <i class="bi bi-envelope me-2"></i> Continue with Email
+                </button>
+
+                <button class="btn btn-outline-secondary w-100 my-2 d-flex align-items-center">
+                    <i class="bi bi-apple me-2"></i> Continue with Apple
+                </button>
+
+                <div class="text-center fw-bold my-2">OR</div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><img src="https://flagcdn.com/w20/in.png"></span>
+                    <span class="input-group-text">+91</span>
+                    <input type="text" class="form-control" placeholder="Mobile number">
+                </div>
+
+                <p class="text-center small">
+                    I agree to <a href="#">Terms & Conditions</a> and
+                    <a href="#">Privacy Policy</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== LOCATION ===================== -->
+    <div class="modal fade" id="locationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content p-4">
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search for your city">
+                </div>
+
+                <p class="location-btn mb-4">
+                    <i class="bi bi-geo-alt"></i> Detect my location
+                </p>
+
+                <h5 class="text-center mb-4">Popular Cities</h5>
+
+                <div class="row text-center gy-4">
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/mumbai-selected.png"
+                            class="city-icon">
+                        <p>Mumbai</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ncr.png"
+                            class="city-icon">
+                        <p>Delhi-NCR</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/bang.png"
+                            class="city-icon">
+                        <p>Bengaluru</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/hyd.png"
+                            class="city-icon">
+                        <p>Hyderabad</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chd.png"
+                            class="city-icon">
+                        <p>Chandigarh</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/ahd.png"
+                            class="city-icon">
+                        <p>Ahmedabad</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/pune.png"
+                            class="city-icon">
+                        <p>Pune</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/chen.png"
+                            class="city-icon">
+                        <p>Chennai</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/kolk.png"
+                            class="city-icon">
+                        <p>Kolkata</p>
+                    </div>
+
+                    <div class="col-3 city-block">
+                        <img src="https://assets-in.bmscdn.com/m6/images/common-modules/regions/koch.png"
+                            class="city-icon">
+                        <p>Kochi</p>
+                    </div>
+
+                </div>
+
+                <p class="text-center mt-4 fw-bold text-danger" style="cursor:pointer;">
+                    View All Cities
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MOVIE CAROUSEL ===================== -->
+    <div class="container py-4">
+        <h3 class="mb-3 fw-bold text-center">Recommended Movies</h3>
+
+        <div id="movieCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center g-3">
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/1.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Zootopia 2</h5>
+                                    <p class="text-muted">Adventure/Animation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/2.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Mastii 4</h5>
+                                    <p class="text-muted">Adult/Comedy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/3.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Tere Ishk Mein</h5>
+                                    <p class="text-muted">Drama/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/4.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Lallo-Krishna</h5>
+                                    <p class="text-muted">Drama</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/5.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">De De Pyaar De 2</h5>
+                                    <p class="text-muted">Drama/Musical/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- SLIDE 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center g-3">
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/6.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Avvaa De</h5>
+                                    <p class="text-muted">Drama/Musical/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/7.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Gustaakh Ishq</h5>
+                                    <p class="text-muted">Drama/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/8.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">120 Bahadur</h5>
+                                    <p class="text-muted">Action/Historical/War</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/9.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Misri</h5>
+                                    <p class="text-muted">Comedy/Romantic</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 220px; height: 320px;">
+                                <img src="img/10.avif" class="card-img-top" style="height: 220px; object-fit: cover;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Ek Deewane Ki Dewaniyat</h5>
+                                    <p class="text-muted">Drama/Romantic/Thriller</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- ===================== OFFCANVAS ===================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <div class="offcanvas offcanvas-end" id="menuPanel">
+        <div class="offcanvas-header">
+            <h4>Hey!</h4>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+
+            <div class="alert bg-light d-flex justify-content-between align-items-center">
+                <div><strong>Unlock offers & benefits</strong></div>
+                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login / Register
+                </button>
+            </div>
+
+            <div class="list-group">
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-bell me-2"></i>Notifications</span> <i class="bi bi-chevron-right"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-receipt me-2"></i>Your Orders</span> <i class="bi bi-lock"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-film me-2"></i>Stream Library</span> <i class="bi bi-lock"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-chat-dots me-2"></i>Help & Support</span> <i class="bi bi-chevron-right"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-gear me-2"></i>Account & Settings</span> <i class="bi bi-lock"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-gear me-2"></i>Rewards</span> <i class="bi bi-lock"></i>
+                </a>
+
+                <a class="list-group-item d-flex justify-content-between">
+                    <span><i class="bi bi-gear me-2"></i>BookAChange</span> <i class="bi bi-lock"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===================== movies ======================= -->
+
+    <div class="container py-4">
+        <h3 class="mb-3 fw-bold text-center">Recommended Movies</h3>
+
+        <div id="demo" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+            <div class="carousel-inner">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center g-3">
+
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/adventure-fun-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/amusement-parks-banner-desktop-collection-202503251132.avif"
+                                    class="card-img-top" style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/arts-crafts-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/comedy-shows-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/interactive-games-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center g-3">
+
+                        <!-- Remaining 5 cards -->
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/kids-banner-desktop-collection-202503251132.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/music-shows-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/theatre-shows-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/upskill-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-auto">
+                            <div class="card" style="width: 200px; height: 200px;">
+                                <img src="image/workshop-and-more-web-collection-202211140440.avif" class="card-img-top"
+                                    style="height: 200px; object-fit: cover;">
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Arrows -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- =====================  premieres =================== -->
+    <div class="bg-dark text-white">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h3 class="fw-bold">Premieres</h3>
+                    <p class="text-white-50 m-0">Brand new releases every Friday</p>
+                </div>
+                <a href="#" class="text-danger fw-semibold">See All ›</a>
+            </div>
+
+            <div id="myslider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00470268-sxwfsccwwj-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Soul on Fire</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00472934-vdsykravps-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Coyotes</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00435471-tmyyavfvuh-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Winner</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00450847-tzxbmnbstl-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Akshardham</h6>
+                                <p class="text-white-50 small m-0">Hindi</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00035908-fenbnarfqj-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Now You See Me 2</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00459131-ekfnxravff-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Good Boy</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00472636-ghmelxgtvg-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Kill Bill</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00470423-fshthqlqmt-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Elevation</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00470454-nhwnyrwumg-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">40 Acres</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+
+                            <div style="width:220px;">
+                                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600/et00470458-wbywhwjcys-portrait.jpg"
+                                    class="w-100 rounded" style="height:270px; object-fit:cover;" alt="">
+                                <h6 class="fw-bold mt-2">Eleanor the Great</h6>
+                                <p class="text-white-50 small m-0">English</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#myslider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myslider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+
+            <!-- TOP ICON ROW -->
+            <div class="row text-center mb-5">
+
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-headset fs-1"></i>
+                    <h6 class="mt-3 small">24/7 CUSTOMER CARE</h6>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-receipt fs-1"></i>
+                    <h6 class="mt-3 small">RESEND BOOKING CONFIRMATION</h6>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-envelope fs-1"></i>
+                    <h6 class="mt-3 small">SUBSCRIBE TO THE NEWSLETTER</h6>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <!-- LINKS BLOCKS -->
+            <div class="row mt-4">
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">MOVIES NOW SHOWING IN MUMBAI</h6>
+                    <p class="text-secondary small">
+                        Tere Ishk Mein | Dhurandhar | Zootopia 2 | De De Pyaar De 2 | Gustaakh Ishq |
+                        Laalo Krishna | 120 Bahadur | Mastiii 4 | Asambhav | Eternity
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">UPCOMING MOVIES IN MUMBAI</h6>
+                    <p class="text-secondary small">
+                        Madhura | Chitralahari | Freddy’s 2 | Sri Vasavi | Suppan | Vaathi | Hay Paisa
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">MOVIES BY GENRE</h6>
+                    <p class="text-secondary small">
+                        Drama | Romantic | Action | Comedy | Thriller | Adventure | Historical | Musical | Sci-fi |
+                        Mystery
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">MOVIES BY LANGUAGE</h6>
+                    <p class="text-secondary small">
+                        Hindi | English | Marathi | Gujarati | Telugu | Portuguese | Sindhi | Haryanvi
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">SPORTS EVENTS IN MUMBAI</h6>
+                    <p class="text-secondary small">
+                        Running | Chess | Cycling | Motorsports | Cricket | Kabaddi | Baseball | Horse Race | Boat Race
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">CINEMAS IN TOP CITIES</h6>
+                    <p class="text-secondary small">
+                        Mumbai | Delhi | Chennai | Bengaluru | Hyderabad | Pune | Ahmedabad | Kolkata | Kochi
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">PLAYS IN TOP CITIES</h6>
+                    <p class="text-secondary small">
+                        Mumbai | Delhi | Chennai | Bengaluru | Hyderabad | Pune | Ahmedabad | Kolkata | Kochi
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">ACTIVITES IN TOP CITIES</h6>
+                    <p class="text-secondary small">
+                        Mumbai | Delhi | Chennai | Bengaluru | Hyderabad | Pune | Ahmedabad | Kolkata | Kochi
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">MOVING NOW SHOWING</h6>
+                    <p class="text-secondary small">
+                        Tere Ishk Mein | Dhurandhar | Zootopia 2 | De De Pyaar De 2 | Gustaakh Ishq |
+                        Laalo Krishna | 120 Bahadur | Mastiii 4 | Asambhav | Eternity
+                    </p>
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">COUNTRIES</h6>
+                    <p class="text-secondary small">
+                        Indonesia | singapore | shri lanka | west indies
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">HELPS</h6>
+                    <p class="text-secondary small">
+                        About Us | current opening | press | releases | Hyderabad | FAQS | tearms and Conditions |
+                        privacy Policy
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">BOOKMYSHOW EXCLUSIVE</h6>
+                    <p class="text-secondary small">
+                        BookAChange | Corporates vouchers | gift cards | list my show | offers | stream | traiers
+                    </p>
+                </div>
+
+                <div class="col-md-12 mb-4">
+                    <h6 class="text-uppercase mb-2">ICC WOMENS CRICKET WORLD CUP 2025</h6>
+                    <p class="text-secondary small">
+                        women's CWS 2025 matches in india | women's CWS 2025 matches in sri lanka
+                </div>
+
+            </div>
+
+            <hr class="border-secondary">
+
+            <div class="text-center text-secondary small mt-3">
+                © 2025 Your Website. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
