@@ -28,3 +28,9 @@
 #sec5 {
     background: #2c3b5d;
 }
+.footer .social-icon a{
+    color: rgb(111, 109, 109);
+}
+.footer .social-icon a:hover{
+    color: white;
+}
