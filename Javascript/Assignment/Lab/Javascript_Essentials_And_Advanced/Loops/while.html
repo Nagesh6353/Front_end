@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 500px;
+            padding: 20px;
+            text-align: center;
+            background: lightcoral;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2 id="h2"></h2>
+    </div>
+
+    <script>
+
+        let sum = 0;
+        let num = 1;
+
+        while (num <= 20) {
+            if (num % 2 === 0) {
+                sum = sum + num;
+            }
+            num++;
+        }
+
+        console.log("Sum of even numbers between 1 and 20:", sum);
+        document.getElementById("h2").innerHTML = "Sum of even numbers between 1 and 20 is: " + sum;
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .box {
+            margin: 0 auto;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            background: lightcoral;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <h2 id="h2"></h2>
+    </div>
+
+    <script>
+
+        let number = [10,5,38,80,20,31];
+
+        let sum = 0;
+
+        for(let i=0; i<number.length; i++){
+            sum = sum + number[i];
+        }
+
+        console.log("Sum of array elements: ",sum);
+        document.getElementById("h2").innerHTML = "Sum of array elements: " + sum ;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            background: lightcoral;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2 id="add"></h2>
+        <h2 id="sub"></h2>
+        <h2 id="mul"></h2>
+        <h2 id="div"></h2>
+        <h2 id="comp"></h2>
+        <h2 id="Logic"></h2>
+
+    </div>
+
+    <script>
+
+        let num1 = 60;
+        let num2 = 20;
+
+        // Arithmetic operators
+        let addition = num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+        // console.log("Addition:",addition);
+        // console.log("Substraction:",subtraction);
+        // console.log("Multiplication:",multiplication);
+        // console.log("Division:",division);
+        document.getElementById("add").innerHTML = `Addition: ${addition}`;
+        document.getElementById("sub").innerHTML = `Subtraction: ${subtraction}`;
+        document.getElementById("mul").innerHTML = `Multiplication: ${multiplication}`;
+        document.getElementById("div").innerHTML = `Division: ${division}`;
+
+
+        // Comparison operators
+        let comparison = num1 == num2;
+        // console.log("Are a and b equal?", a == b);
+        // console.log("Is a greater than b?", a > b);
+        document.getElementById("comp").innerHTML = `Are num1 and num2 equal?: ${comparison}`;
+
+
+        // Logical operators
+        let logic = num1 > 10 && num2 < 25;
+        // console.log("Is a > 10 AND b < 5?", a > 10 && b < 5);
+        document.getElementById("Logic").innerHTML = `Is num1 > 10 and num2 < 25?: ${logic}`;
+
+    </script>
+
+</body>
+
+</html>

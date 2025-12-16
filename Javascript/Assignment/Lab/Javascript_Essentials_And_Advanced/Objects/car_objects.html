@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            background: lightcoral;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2 id="brand"></h2>
+        <h2 id="model"></h2>
+        <h2 id="year"></h2>
+        <h2 id="color"></h2>
+    </div>
+
+    <script>
+
+        let car = {
+            brand: "Suzuki",
+            model: "Swift",
+            year: "2019"
+        };
+
+        // console.log("Brands: ",car.brand + " Model: ", car.model);
+        console.log("Brands: ", car.brand);
+        console.log("Model: ", car.model);
+
+        car.year = 2022;
+        console.log("Model: ", car.year);
+
+        car.color = "red";
+        console.log(car);
+
+        document.getElementById("brand").innerHTML = "Brands: " + car.brand ;
+        document.getElementById("model").innerHTML = "Model: " + car.model ;
+        document.getElementById("year").innerHTML = "Year: " + car.year ;
+        document.getElementById("color").innerHTML = "Color: " + car.color ;
+
+    </script>
+
+</body>
+
+</html>
