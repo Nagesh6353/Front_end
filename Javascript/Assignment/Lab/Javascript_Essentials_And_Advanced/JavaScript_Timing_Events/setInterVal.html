@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: black;
+        }
+        .box {
+            margin: 300px auto;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            background: lightcoral;
+            border-radius: 20px;
+        }
+        #Clock{
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div id="Clock">
+        
+        </div>
+    </div>
+
+    <script>
+
+        function updateClock() {
+
+            let currentDate = new Date();
+
+            let Hours = currentDate.getHours();
+            let Minutes = currentDate.getMinutes();
+            let Seconds = currentDate.getSeconds();
+
+            Hours = Hours < 10 ? "0" + Hours : Hours;
+            Minutes = Minutes < 10 ? "0" + Minutes : Minutes;
+            Seconds = Seconds < 10 ? "0" + Seconds : Seconds;
+
+            document.getElementById("Clock").innerHTML = `${Hours} : ${Minutes} : ${Seconds}`;
+
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</body>
+
+</html>

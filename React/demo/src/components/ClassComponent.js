@@ -8,4 +8,4 @@ class ClassComponents extends Component{
     }
 }
 
-export default ClassComponents;
+export default ClassComponents; 
