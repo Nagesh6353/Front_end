@@ -4,6 +4,7 @@ import Function from "./components/Function";
 import Hello from "./Jsx/Hello";
 import Data from "./Css/Data";
 import MainProps from "./Props/MainProps";
+import MainState from "./State/MainState";
 
 
 
@@ -16,7 +17,8 @@ function App() {
       {/* <Function /> */}
       {/* <Hello/> */}
       {/* <Data /> */}
-      <MainProps />
+      {/* <MainProps /> */}
+      <MainState />
 
     </div>
   )
