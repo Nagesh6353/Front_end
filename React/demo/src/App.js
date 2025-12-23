@@ -7,6 +7,9 @@ import React from "react";
 // import MainState from "./State/MainState";
 import FormData from "./formHandling/FormData";
 import FormObj from "./formHandling/FormObj";
+import ApiDataEffect from "./UseEffect/ApiDataEffect";
+import FsUserAxios from "./UseEffect/FsUserAxios";
+import DjsUserAxios from "./UseEffect/DjsUserAxios";
 
 
 
@@ -23,7 +26,13 @@ function App() {
       {/* <MainState /> */}
 
       {/* <FormData /> */}
-      <FormObj />
+      {/* <FormObj /> */}
+
+      {/* <ApiDataEffect /> */}
+
+      {/* <FsUserAxios /> */}
+
+      <DjsUserAxios />
 
     </div>
   )
