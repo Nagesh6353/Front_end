@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-auto text-white" href="#">Tecocraft</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sec1 mt-5">
+        <div class="container">
+            <div class="form-box">
+                <h2 class="text-center mb-3">Feedback Form</h2>
+                <form id="FeedbackForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Attendee Name">
+                        <span style="color: red; font-size: 16px; font-weight: bold;" id="nmerr"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email Address">
+                        <span id="emerr" style="color: red; font-size: 16px; font-weight: bold;"></span>
+                    </div>
+                    <div class="mb-3">
+                        <select id="event" class="form-select">
+                            <option value="" disabled selected>-- Select Event --</option>
+                            <option value="Webinar">Webinar</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Meetup">Meetup</option>
+                        </select> <span id="everr" style="color: red; font-size: 16px; font-weight: bold;"></span>
+                    </div>
+                    <div class="mb-3">
+                        <select id="rating" class="form-select">
+                            <option value="" disabled selected>-- Rating --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> <span id="rterr" style="color: red; font-size: 16px; font-weight: bold;"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">Comments</label>
+                        <textarea class="form-control" id="comment" rows="3"></textarea>
+                        <span id="cmerr" style="color: red; font-size: 16px; font-weight: bold;"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="feedbackForm.js"></script>
+</body>
+
+</html>

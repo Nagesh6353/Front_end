@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try Catch</title>
+</head>
+
+<body>
+
+    <h2>Divide API Number by Zero</h2>
+
+    <button onclick="divideByZero()">Divide</button>
+
+    <p id="result"></p>
+
+    <script>
+        function divideByZero() {
+            try {
+                fetch("https://693bd790b762a4f15c3e7938.mockapi.io/numbers", {
+                    method: "GET"
+                })
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((data) => {
+
+                        let number = data[0].value;
+                        let divisor = 0;
+
+                        if (divisor === 0) {
+                            throw new Error("Cannot divide by zero");
+                        }
+
+                        let result = number / divisor;
+                        document.getElementById("result").innerHTML = `<h1>Result: </h1>${result}`;
+                    })
+                    .catch((error) => {
+                        document.getElementById("result").innerHTML = `<h1>Error: </h1>${error.message}`;
+                    });
+
+            } catch (error) {
+                document.getElementById("result").innerHTML = `<h1>Error: </h1>${error.message}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
