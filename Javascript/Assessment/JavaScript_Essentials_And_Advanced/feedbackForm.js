@@ -24,16 +24,19 @@ class FeedbackFormHandler {
         this.Comment = document.getElementById("comment");
         this.CommentErr = document.getElementById("cmerr");
 
+        // Data show element
+        this.output = document.getElementById("output");
+
         // addEventListener for Form Submit
         this.form.addEventListener("submit", e => {
             e.preventDefault();
-            this.validateForm();
+            // this.validateForm();
 
             const isValid = this.validateForm();
 
             if (isValid) {
                 alert("Form Submitted Successfully");
-
+                this.showData();
                 this.form.reset();
             }
         });
@@ -141,6 +144,18 @@ class FeedbackFormHandler {
             this.Comment.style.border = "2px solid green";
         }
     }
+
+    // Data show 
+    showData() {
+        this.output.innerHTML = `
+        Name: ${this.Name.value} <br>
+        Email: ${this.Email.value} <br>
+        Event: ${this.Event.value} <br>
+        Rating: ${this.Rating.value} <br>
+        Comment: ${this.Comment.value}
+    `;
+    }
+
 
 
 }
