@@ -24,19 +24,17 @@ class FeedbackFormHandler {
         this.Comment = document.getElementById("comment");
         this.CommentErr = document.getElementById("cmerr");
 
-        // Data show element
-        this.output = document.getElementById("output");
-
         // addEventListener for Form Submit
         this.form.addEventListener("submit", e => {
             e.preventDefault();
             // this.validateForm();
-
             const isValid = this.validateForm();
 
             if (isValid) {
-                alert("Form Submitted Successfully");
-                this.showData();
+                // alert("Form Submitted Successfully");
+                this.Msg = document.getElementById("msg");
+                this.Msg.innerHTML = `<div class="alert alert-success mt-3">Form Submitted Successfully </div>`;
+                this.storeData();
                 this.form.reset();
             }
         });
@@ -95,6 +93,7 @@ class FeedbackFormHandler {
         }
     }
 
+    // Form Name Validate
     validateName() {
         if (this.Name.value.trim().length < 3) {
             this.NameErr.innerHTML = "Name must be at least 3 characters";
@@ -105,6 +104,7 @@ class FeedbackFormHandler {
         }
     }
 
+    // Form Email Validate
     validateEmail() {
         if (!this.emailRegex.test(this.Email.value.trim())) {
             this.EmailErr.innerHTML = "Please enter valid email";
@@ -115,6 +115,7 @@ class FeedbackFormHandler {
         }
     }
 
+    // Form Event Validate
     validateEvent() {
         if (this.Event.value.trim() === "") {
             this.EventErr.innerHTML = "Please Select Event";
@@ -125,6 +126,7 @@ class FeedbackFormHandler {
         }
     }
 
+    // Form Rating Validate
     validateRating() {
         if (this.Rating.value.trim() === "") {
             this.RatingErr.innerHTML = "Please Give Rating must be 1–5";
@@ -135,6 +137,7 @@ class FeedbackFormHandler {
         }
     }
 
+    // Form Comments Validate
     validateComment() {
         if (this.Comment.value.trim().length < 10) {
             this.CommentErr.innerHTML = "Comment must be at least 10 characters";
@@ -145,19 +148,20 @@ class FeedbackFormHandler {
         }
     }
 
-    // Data show 
-    showData() {
-        this.output.innerHTML = `
-        Name: ${this.Name.value} <br>
-        Email: ${this.Email.value} <br>
-        Event: ${this.Event.value} <br>
-        Rating: ${this.Rating.value} <br>
-        Comment: ${this.Comment.value}
-    `;
+    // Data Store in Session 
+    storeData() {
+        const record = {
+            name: this.Name.value.trim(),
+            email: this.Email.value.trim(),
+            event: this.Event.value,
+            rating: this.Rating.value,
+            coments: this.Comment.value.trim()
+        };
+
+        const data = JSON.parse(sessionStorage.getItem("feedbackData")) || [];
+        data.push(record);
+        sessionStorage.setItem("feedbackData", JSON.stringify(data));
     }
-
-
-
 }
 
 new FeedbackFormHandler();

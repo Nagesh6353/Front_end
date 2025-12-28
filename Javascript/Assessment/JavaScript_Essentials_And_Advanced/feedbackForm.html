@@ -19,7 +19,8 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand mx-auto text-white" href="#">Tecocraft</a>
+                <a class="navbar-brand text-white" href="#">Tecocraft</a>
+                <a href="view.html" class="btn btn-success">View Feedback</a>
             </div>
         </nav>
     </header>
@@ -31,16 +32,16 @@
                 <form id="FeedbackForm">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter Attendee Name">
+                        <input type="text" class="form-control" id="name" placeholder="Enter Attendee Name" required>
                         <span style="color: red; font-size: 16px; font-weight: bold;" id="nmerr"></span>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter Email Address">
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
                         <span id="emerr" style="color: red; font-size: 16px; font-weight: bold;"></span>
                     </div>
                     <div class="mb-3">
-                        <select id="event" class="form-select">
+                        <select id="event" class="form-select" required>
                             <option value="" disabled selected>-- Select Event --</option>
                             <option value="Webinar">Webinar</option>
                             <option value="Workshop">Workshop</option>
@@ -48,7 +49,7 @@
                         </select> <span id="everr" style="color: red; font-size: 16px; font-weight: bold;"></span>
                     </div>
                     <div class="mb-3">
-                        <select id="rating" class="form-select">
+                        <select id="rating" class="form-select" required>
                             <option value="" disabled selected>-- Rating --</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -59,26 +60,17 @@
                     </div>
                     <div class="mb-3">
                         <label for="comments" class="form-label">Comments</label>
-                        <textarea class="form-control" id="comment" rows="3"></textarea>
+                        <textarea class="form-control" id="comment" rows="3" required></textarea>
                         <span id="cmerr" style="color: red; font-size: 16px; font-weight: bold;"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+
+                    <div id="msg"></div>
                 </form>
             </div>
         </div>
     </section>
-
-    <section id="sec2" class="mt-5">
-        <div class="container">
-            <div class="form-box">
-                <h2>Feedback Data</h2>
-                <div id="output">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
     <script src="feedbackForm.js"></script>

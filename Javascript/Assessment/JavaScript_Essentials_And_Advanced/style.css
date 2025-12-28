@@ -39,8 +39,8 @@ body {
     font-weight: 500;
 }
 
-#FeedbackForm button {
-    width: 400px;
+#FeedbackForm .submit {
+    width: 332px;
 }
 
 
