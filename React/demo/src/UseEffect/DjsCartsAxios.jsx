@@ -17,12 +17,12 @@ function DjsCartsAxios() {
     return (
         <div>
             <div className="container">
-                <div className="row">
+                <div className="row mt-5">
                     {
                         cart && cart.map((data, index) => 
                             data.products.map((product, index) => {
                                 return (
-                                    <div className="col-md-3">
+                                    <div className="col-md-3" key={index}>
                                         <div className="card" style={{ width: '18rem' }}>
                                         <img src={product.thumbnail} className="card-img-top" alt="..." />
                                         <div className="card-body">
