@@ -1,0 +1,65 @@
+{
+    "admin": [
+        {
+            "id": 1,
+            "name": "admin",
+            "email": "admin@gmail.com",
+            "password": "1234"
+        },
+        {
+            "id": 2,
+            "name": "subadmin",
+            "email": "subadmin@gmail.com",
+            "password": "123456"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "vivek",
+            "email": "vivek@gmail.com",
+            "password": "1234",
+            "status": "unblock"
+        },
+        {
+            "id": 2,
+            "name": "gaurav",
+            "email": "gaurav@gmail.com",
+            "password": "123456",
+            "status": "block"
+        },
+        {
+            "id": 3,
+            "name": "zeel",
+            "email": "zeel@gmail.com",
+            "password": "123465",
+            "status": "unblock"
+        }
+    ],
+    "doctors": [
+        {
+            "id": 1,
+            "name": "Dr. Marcus Johnson",
+            "specialist": "Cardiologist",
+            "desc": "Best Cardiology Doctor",
+            "experience": "15+ Years Experience",
+            "department": "Cardiology Dept."
+        },
+        {
+            "id": 2,
+            "name": "Dr. Sarah Williams",
+            "specialist": "Neurologist",
+            "desc": "Best Neurology Doctor",
+            "experience": "12+ Years Experience",
+            "department": "Neurology Dept."
+        },
+        {
+            "id": 3,
+            "name": "Dr. Michael Chen",
+            "specialist": "Orthopedic Surgeon",
+            "desc": "Best Orthopedics Doctor",
+            "experience": "18+ Years Experience",
+            "department": "Orthopedics Dept."
+        }
+    ]
+}
