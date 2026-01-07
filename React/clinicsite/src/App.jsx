@@ -17,6 +17,8 @@ import Terms from './Website/Pages/Terms';
 import Privacy from './Website/Pages/Privacy';
 import NotFound from './Website/Pages/NotFound';
 import Contact from './Website/Pages/Contact';
+import Dashboard from './Admin/AdminPages/Dashboard';
+import DoctorManage from './Admin/AdminPages/DoctorManage';
 
 function App() {
   useEffect(() => {
@@ -50,6 +52,12 @@ function App() {
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound />} />
+
+            {/* Admin Routes */}
+
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/doctormanage' element={<DoctorManage />} />
+
           </Routes>
       </div>
     </BrowserRouter>
