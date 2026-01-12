@@ -5,15 +5,35 @@ import axios from 'axios'
 
 function DoctorManage() {
 
+    // All Doctors API
     const [doctor, setdoctor] = useState([]);
 
     useEffect(() => {
         fetchdoctors();
-    },[])
+    }, [])
 
     const fetchdoctors = async () => {
         const res = await axios.get("http://localhost:3000/doctors");
         setdoctor(res.data);
+    }
+
+    // Single Doctor API Call Using View
+
+    const [singledoctor, setsingledoctor] = useState({
+
+        id: "",
+        name: "",
+        specialist: "",
+        desc: "",
+        experience: "",
+        department: "",
+        image: ""
+    });
+
+    const viewDoctor = async (id) => {
+        const res = await axios.get(`http://localhost:3000/doctors/${id}`);
+        // console.log(res.data);
+        setsingledoctor(res.data);
     }
 
     return (
@@ -38,7 +58,7 @@ function DoctorManage() {
                         {
                             doctor && doctor.map((data, index) => {
                                 return (
-                                    <tr className='text-center'>
+                                    <tr className='text-center' key={index}>
                                         <th scope="row">{data.id}</th>
                                         <td>{data.name}</td>
                                         <td>{data.specialist}</td>
@@ -46,7 +66,7 @@ function DoctorManage() {
                                         <td>{data.department}</td>
                                         <td><img src={data.image} width="100px" alt="" /></td>
                                         <td>
-                                            <button className='btn btn-info mx-2'>View</button>
+                                            <button className='btn btn-info mx-2' data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => viewDoctor(data.id)}>View</button>
                                             <button className='btn btn-success mx-2'>Edit</button>
                                             <button className='btn btn-danger'>Delete</button>
                                         </td>
@@ -57,6 +77,30 @@ function DoctorManage() {
 
                     </tbody>
                 </table>
+
+                {/* View Modal */}
+                <div className="modal col-12" id="exampleModal" tabIndex={-1}  >
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">Doctor Id: {singledoctor.id}</h5>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                            </div>
+                            <div className="modal-body">
+                                <p>Doctor Name: {singledoctor.name}</p>
+                                <img src={singledoctor.image} />
+                                <p>Specialist: {singledoctor.specialist}</p>
+                                <p>Description: {singledoctor.desc}</p>
+                                <p>Experience: {singledoctor.experience}</p>
+                                <p>Department: {singledoctor.department}</p>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 

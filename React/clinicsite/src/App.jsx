@@ -19,6 +19,7 @@ import NotFound from './Website/Pages/NotFound';
 import Contact from './Website/Pages/Contact';
 import Dashboard from './Admin/AdminPages/Dashboard';
 import DoctorManage from './Admin/AdminPages/DoctorManage';
+import AddDoctor from './Admin/AdminPages/AddDoctor';
 
 function App() {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
 
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/doctormanage' element={<DoctorManage />} />
+            <Route path='/adddoctor' element={<AddDoctor />} />
 
           </Routes>
       </div>

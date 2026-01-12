@@ -16,23 +16,16 @@ function Adminheader() {
                         <nav id="navmenu" className="navmenu">
                             <ul>
                                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-                                <li><NavLink to="/doctormanage">Doctors</NavLink></li>
+                                <li className="dropdown"><span>Doctors</span> <i className="bi bi-chevron-down toggle-dropdown" />
+                                    <ul>
+                                        <li><NavLink to="/doctormanage">Doctor Manage</NavLink></li>
+                                        <li><NavLink to="/adddoctor">Add Doctor</NavLink></li>
+                                    </ul>
+                                </li>
                                 {/* <li><NavLink to="/department">Departments</NavLink></li>
                                 <li><NavLink to="/services">Services</NavLink></li>
                                 <li><NavLink to="/doctor">Doctors</NavLink></li>
-                                <li className="dropdown"><a href="#"><span>More Pages</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
-                                    <ul>
-                                        <li><NavLink to="/departdetails">Department Details</NavLink></li>
-                                        <li><NavLink to="/servdetails">Service Details</NavLink></li>
-                                        <li><NavLink to="/appointment">Appointment</NavLink></li>
-                                        <li><NavLink to="/testimonial">Testimonials</NavLink></li>
-                                        <li><NavLink to="/faq">Frequently Asked Questions</NavLink></li>
-                                        <li><NavLink to="/gallery">Gallery</NavLink></li>
-                                        <li><NavLink to="/terms">Terms</NavLink></li>
-                                        <li><NavLink to="/privacy">Privacy</NavLink></li>
-                                    </ul>
-                                </li>
-                               
+                                                               
                                 <li><NavLink to="/contact">Contact</NavLink></li> */}
                             </ul>
                             <i className="mobile-nav-toggle d-xl-none bi bi-list" />

@@ -1,77 +1,86 @@
 {
-    "admin": [
-        {
-            "id": 1,
-            "name": "admin",
-            "email": "admin@gmail.com",
-            "password": "1234"
-        },
-        {
-            "id": 2,
-            "name": "subadmin",
-            "email": "subadmin@gmail.com",
-            "password": "123456"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "vivek",
-            "email": "vivek@gmail.com",
-            "password": "1234",
-            "status": "unblock"
-        },
-        {
-            "id": 2,
-            "name": "gaurav",
-            "email": "gaurav@gmail.com",
-            "password": "123456",
-            "status": "block"
-        },
-        {
-            "id": 3,
-            "name": "zeel",
-            "email": "zeel@gmail.com",
-            "password": "123465",
-            "status": "unblock"
-        }
-    ],
-    "doctors": [
-        {
-            "id": 1,
-            "name": "Dr. Pankaj Jain",
-            "specialist": "Emergency Medicine",
-            "desc": "Explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
-            "experience": "15+ Years Experience",
-            "department": "Emergency Dept.",
-            "image": "https://tse3.mm.bing.net/th/id/OIP.T1u6Gr1XJVQYQ6sjfQMlcgHaHa?pid=Api&P=0&h=180"
-        },
-        {
-            "id": 2,
-            "name": "Dr. Arvind Patel",
-            "specialist": "Neurologist",
-            "desc": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "experience": "12+ Years Experience",
-            "department": "Neurology Dept.",
-            "image": "https://tse3.mm.bing.net/th/id/OIP.ZXUXXfmR8QxEGLg2L3dk-QHaEJ?pid=Api&P=0&h=180"
-        },
-        {
-            "id": 3,
-            "name": "Dr. Michael Chen",
-            "specialist": "Dermatologist",
-            "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-            "experience": "18+ Years Experience",
-            "department": "Dermatology Dept.",
-            "image": "https://tse2.mm.bing.net/th/id/OIP.G4Lo57buZLkuG99l5fb6aQHaE8?pid=Api&P=0&h=180"
-        },
-        {
-            "id": 4,
-            "name": "Dr. Jitesh Bhatt",
-            "specialist": "Radiologist",
-            "desc": "Magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem.",
-            "experience": "13+ Years Experience",
-            "department": "Radiology Dept.",
-            "image": "https://tse3.mm.bing.net/th/id/OIP.EXW8trXVnF3kIXwO2zWw0gHaE8?pid=Api&P=0&h=180"
-        }
-    ]
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "subadmin",
+      "email": "subadmin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "gaurav",
+      "email": "gaurav@gmail.com",
+      "password": "123456",
+      "status": "block"
+    },
+    {
+      "id": "3",
+      "name": "zeel",
+      "email": "zeel@gmail.com",
+      "password": "123465",
+      "status": "unblock"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr. Pankaj Jain",
+      "specialist": "Emergency Medicine",
+      "desc": "Explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
+      "experience": "15+ Years Experience",
+      "department": "Emergency Dept.",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.T1u6Gr1XJVQYQ6sjfQMlcgHaHa?pid=Api&P=0&h=180"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Arvind Patel",
+      "specialist": "Neurologist",
+      "desc": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "experience": "12+ Years Experience",
+      "department": "Neurology Dept.",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.ZXUXXfmR8QxEGLg2L3dk-QHaEJ?pid=Api&P=0&h=180"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Michael Chen",
+      "specialist": "Dermatologist",
+      "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "experience": "18+ Years Experience",
+      "department": "Dermatology Dept.",
+      "image": "https://tse2.mm.bing.net/th/id/OIP.G4Lo57buZLkuG99l5fb6aQHaE8?pid=Api&P=0&h=180"
+    },
+    {
+      "id": "4",
+      "name": "Dr. Jitesh Bhatt",
+      "specialist": "Radiologist",
+      "desc": "Magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem.",
+      "experience": "13+ Years Experience",
+      "department": "Radiology Dept.",
+      "image": "https://tse3.mm.bing.net/th/id/OIP.EXW8trXVnF3kIXwO2zWw0gHaE8?pid=Api&P=0&h=180"
+    },
+    {
+      "id": "1768044178989",
+      "name": "Vivek Patel",
+      "specialist": "oncology",
+      "desc": "Best Oncologist Doctor",
+      "experience": "10+ years experience",
+      "department": "oncology",
+      "image": "https://tse1.mm.bing.net/th/id/OIP.J3a1PInS_7BJiZEp95MPMQHaHa?pid=Api&P=0&h=180"
+    }
+  ]
 }
