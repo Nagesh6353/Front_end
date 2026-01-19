@@ -20,6 +20,7 @@ import Contact from './Website/Pages/Contact';
 import Dashboard from './Admin/AdminPages/Dashboard';
 import DoctorManage from './Admin/AdminPages/DoctorManage';
 import AddDoctor from './Admin/AdminPages/AddDoctor';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
 
     <BrowserRouter>
       <div>
+        <ToastContainer />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />

@@ -40,10 +40,10 @@
     {
       "id": "1",
       "name": "Dr. Pankaj Jain",
-      "specialist": "Emergency Medicine",
+      "specialist": "Emergency",
       "desc": "Explicabo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
       "experience": "15+ Years Experience",
-      "department": "Emergency Dept.",
+      "department": "Emergency dept.",
       "image": "https://tse3.mm.bing.net/th/id/OIP.T1u6Gr1XJVQYQ6sjfQMlcgHaHa?pid=Api&P=0&h=180"
     },
     {
@@ -58,29 +58,11 @@
     {
       "id": "3",
       "name": "Dr. Michael Chen",
-      "specialist": "Dermatologist",
+      "specialist": "pediatrics",
       "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-      "experience": "18+ Years Experience",
-      "department": "Dermatology Dept.",
+      "experience": "16+ Years Experience",
+      "department": "pediatrics dept.",
       "image": "https://tse2.mm.bing.net/th/id/OIP.G4Lo57buZLkuG99l5fb6aQHaE8?pid=Api&P=0&h=180"
-    },
-    {
-      "id": "4",
-      "name": "Dr. Jitesh Bhatt",
-      "specialist": "Radiologist",
-      "desc": "Magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem.",
-      "experience": "13+ Years Experience",
-      "department": "Radiology Dept.",
-      "image": "https://tse3.mm.bing.net/th/id/OIP.EXW8trXVnF3kIXwO2zWw0gHaE8?pid=Api&P=0&h=180"
-    },
-    {
-      "id": "1768044178989",
-      "name": "Vivek Patel",
-      "specialist": "oncology",
-      "desc": "Best Oncologist Doctor",
-      "experience": "10+ years experience",
-      "department": "oncology",
-      "image": "https://tse1.mm.bing.net/th/id/OIP.J3a1PInS_7BJiZEp95MPMQHaHa?pid=Api&P=0&h=180"
     }
   ]
 }

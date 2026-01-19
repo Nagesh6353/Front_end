@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Adminheader from '../AdminComan/Adminheader'
 import AdminPageTitle from '../AdminComan/AdminPageTitle'
 import axios from 'axios'
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 function DoctorManage() {
+
+    const redirect = useNavigate();
 
     // All Doctors API
     const [doctor, setdoctor] = useState([]);
@@ -36,6 +40,67 @@ function DoctorManage() {
         setsingledoctor(res.data);
     }
 
+    // Delete Record
+    const deleteDoctor = async (id) => {
+        const res = await axios.delete(`http://localhost:3000/doctors/${id}`);
+        alert("Are You Sure To Delete");
+        fetchdoctors();
+    }
+
+    // Edit Record
+
+    const [edit, setedit] = useState(null);
+
+    const [edited, setedited] = useState({
+        id: "",
+        name: "",
+        specialist: "",
+        desc: "",
+        experience: "",
+        department: "",
+        image: ""
+    });
+
+    const openmodal = (data) => {
+        console.log(data);
+        setedit(data);
+        setedited(data);
+    }
+
+    const getchange = (e) => {
+        setedited({
+            ...edited,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const update = async (e) => {
+
+        e.preventDefault()
+
+        try {
+            const res = await axios.put(`http://localhost:3000/doctors/${edited.id}`, edited);
+            toast.success("Record Update Successfully..");
+            setedited({
+                id: "",
+                name: "",
+                specialist: "",
+                desc: "",
+                experience: "",
+                department: "",
+                image: ""
+            });
+
+            setedit(null);
+            redirect("/doctormanage");
+            
+        } catch (error) {
+            toast.error("Api Not Found..");
+        }
+    }
+
+
+
     return (
         <div>
             <Adminheader />
@@ -67,8 +132,8 @@ function DoctorManage() {
                                         <td><img src={data.image} width="100px" alt="" /></td>
                                         <td>
                                             <button className='btn btn-info mx-2' data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => viewDoctor(data.id)}>View</button>
-                                            <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button className='btn btn-success mx-2' onClick={() => openmodal(data)} >Edit</button>
+                                            <button className='btn btn-danger' onClick={() => deleteDoctor(data.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )
@@ -101,7 +166,64 @@ function DoctorManage() {
                     </div>
                 </div>
 
+                {/* update form Modal */}
+                {edit && (
+                    <div className="container my-5">
+                        <h1>Update Form</h1>
+                        <form method="post" className="php-email-form">
+                            <div className="row gy-4">
+                                <div className="col-12">
+                                    <input type="text" onChange={getchange} value={edited.name} name="name" className="form-control" placeholder="Doctors name" required />
+                                </div>
+                                <div className="mb-3">
+                                    <select name="specialist" onChange={getchange} value={edited.specialist} className="form-select" required>
+                                        <option value hidden>Select Specialist</option>
+                                        <option value="general">General Consultation</option>
+                                        <option value="cardiology">Cardiologist</option>
+                                        <option value="neurology">Neurologist</option>
+                                        <option value="orthopedics">Orthopedic Surgeon</option>
+                                        <option value="pediatrics">Pediatrician</option>
+                                        <option value="dermatology">Dermatologist</option>
+                                        <option value="oncology">Oncologist</option>
+                                        <option value="Emergency">Emergency Medicine</option>
+                                        <option value="Radiology">Radiologist</option>
+                                    </select>
+                                </div>
+                                <div className="col-12">
+                                    <input type="url" name="image" onChange={getchange} value={edited.image} className="form-control" placeholder="Full image" required />
+                                </div>
 
+                                <div className="col-12">
+                                    <textarea name="desc" onChange={getchange} value={edited.desc} className="form-control" rows={4} placeholder="descrition" />
+                                </div>
+
+                                <div className="col-12">
+                                    <input type="text" onChange={getchange} value={edited.experience} name="experience" className="form-control" placeholder='experience' required />
+                                </div>
+
+                                <div className="mb-3">
+                                    <select name="department" onChange={getchange} value={edited.department} className="form-select" required>
+                                        <option value hidden>Select Department</option>
+                                        <option value="general dept.">General Consultation Dept.</option>
+                                        <option value="cardiology dept.">Cardiology Dept.</option>
+                                        <option value="neurology dept.">Neurology Dept.</option>
+                                        <option value="orthopedics dept.">Orthopedics Dept.</option>
+                                        <option value="pediatrics dept.">Pediatrics Dept.</option>
+                                        <option value="dermatology dept.">Dermatology Dept.</option>
+                                        <option value="oncology dept.">Oncology Dept.</option>
+                                        <option value="Emergency dept.">Emergency Medicine Dept.</option>
+                                        <option value="Radiology dept.">Radiology Dept.</option>
+                                    </select>
+                                </div>
+
+                                <div className="col-12">
+                                    <button type="submit" className="btn btn-success" onClick={update}>Update</button>
+                                    <button type="submit" className="btn btn-info mx-1" onClick={() => setedit(null)} > cancle</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                )}
             </div>
 
         </div>
