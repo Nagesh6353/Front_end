@@ -1,7 +1,23 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, NavLink, redirect, useNavigate } from 'react-router-dom'
 
 function Header() {
+
+    const redirect = useNavigate();
+
+    useEffect(()=>{
+        if(!localStorage.getItem("Uid")){
+            redirect("/login");
+        }
+    })
+
+    const logout = () => {
+        localStorage.removeItem("Uid");
+        localStorage.removeItem("Uname");
+        redirect("/login");
+        toast.success("Logout Successfully..");
+    }
+
     return (
         <div>
             <header id="header" className="header fixed-top">
@@ -47,6 +63,33 @@ function Header() {
                                 </li>
                                
                                 <li><NavLink to="/contact">Contact</NavLink></li>
+                                <li>
+                                    {
+                                        (()=>{
+                                            if(localStorage.getItem("Uid")){
+                                                return(
+                                                    <Link>Hello, {localStorage.getItem("Uname")}</Link>
+                                                )
+                                            }
+                                        })()
+                                    }
+                                </li>
+                                <li>
+                                    {
+                                        (()=>{
+                                            if(localStorage.getItem("Uid")){
+                                                return(
+                                                    <Link className='btn btn-danger p-1 text-white' onClick={logout}>Logout</Link>
+                                                )
+                                            }
+                                            else{
+                                                return(
+                                                    <Link to="login">Login</Link>
+                                                )
+                                            }
+                                        })()
+                                    }
+                                </li>
                             </ul>
                             <i className="mobile-nav-toggle d-xl-none bi bi-list" />
                         </nav>

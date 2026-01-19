@@ -21,6 +21,8 @@ import Dashboard from './Admin/AdminPages/Dashboard';
 import DoctorManage from './Admin/AdminPages/DoctorManage';
 import AddDoctor from './Admin/AdminPages/AddDoctor';
 import { ToastContainer } from 'react-toastify';
+import AdminLogin from './Admin/AdminPages/AdminLogin';
+import Login from './Website/Pages/Login';
 
 function App() {
   useEffect(() => {
@@ -54,6 +56,7 @@ function App() {
             <Route path='/terms' element={<Terms />} />
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/login' element={<Login />} />
             <Route path='*' element={<NotFound />} />
 
             {/* Admin Routes */}
@@ -61,6 +64,7 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/doctormanage' element={<DoctorManage />} />
             <Route path='/adddoctor' element={<AddDoctor />} />
+            <Route path='/adminlogin' element={<AdminLogin />} />
 
           </Routes>
       </div>

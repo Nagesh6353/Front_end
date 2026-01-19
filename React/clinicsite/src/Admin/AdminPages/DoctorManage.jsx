@@ -92,7 +92,6 @@ function DoctorManage() {
             });
 
             setedit(null);
-            redirect("/doctormanage");
             
         } catch (error) {
             toast.error("Api Not Found..");
