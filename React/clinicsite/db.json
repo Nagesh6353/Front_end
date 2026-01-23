@@ -19,14 +19,14 @@
       "name": "vivek",
       "email": "vivek@gmail.com",
       "password": "1234",
-      "status": "unblock"
+      "status": "block"
     },
     {
       "id": "2",
       "name": "gaurav",
       "email": "gaurav@gmail.com",
-      "password": "123456",
-      "status": "block"
+      "password": "123",
+      "status": "unblock"
     },
     {
       "id": "3",
@@ -63,6 +63,26 @@
       "experience": "16+ Years Experience",
       "department": "pediatrics dept.",
       "image": "https://tse2.mm.bing.net/th/id/OIP.G4Lo57buZLkuG99l5fb6aQHaE8?pid=Api&P=0&h=180"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "cardiology",
+      "desc": "Comprehensive heart care with advanced diagnostic tools and treatment options for cardiovascular conditions.",
+      "image": "https://img.pikbest.com/wp/202347/examinations-cardiologist-examining-3d-model-heart-with-infarction-location_9756915.jpg!bw700"
+    },
+    {
+      "id": "2",
+      "name": "Neurology",
+      "desc": "Expert neurological care for brain and nervous system disorders with state-of-the-art imaging technology.",
+      "image": "https://tse1.mm.bing.net/th/id/OIP.-FFUnjvideN-lbRGS9iA5gHaE8?pid=Api&P=0&h=180"
+    },
+    {
+      "id": "1769172103412",
+      "name": "orthopedics",
+      "desc": "Specialized bone and joint treatment including sports medicine and reconstructive surgery procedures.",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.2Cjcr993jP0lNKCwKencdAHaEo?pid=Api&P=0&h=180"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+    "services": [
+        {
+            "id":"1",
+            "name":"Solar Panels",
+            "desc":"Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.",
+            "image":"https://tse3.mm.bing.net/th/id/OIP.TmZCRnE5Q57ltmBw5m6TBQHaE6?pid=Api&P=0&h=180"
+        },
+        {
+            "id":"2",
+            "name":"Hydropower Plants",
+            "desc":"Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.",
+            "image":"https://tse3.mm.bing.net/th/id/OIP.n-XAIIJz45xcBu_vGPMBXAHaE7?pid=Api&P=0&h=180"
+        },
+        {
+            "id":"3",
+            "name":"Wind Turbines",
+            "desc":"Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.",
+            "image":"https://tse4.mm.bing.net/th/id/OIP.xEBxJjn0uE6UTGsAFry_BgHaFh?pid=Api&P=0&h=180"
+        }
+    ]
+}

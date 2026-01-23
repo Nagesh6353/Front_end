@@ -39,6 +39,12 @@ function Adminheader() {
                                         <li><NavLink to="/adddoctor">Add Doctor</NavLink></li>
                                     </ul>
                                 </li>
+                                <li className="dropdown"><span>Services</span> <i className="bi bi-chevron-down toggle-dropdown" />
+                                    <ul>
+                                        <li><NavLink to="/servicemanage">Service Manage</NavLink></li>
+                                        <li><NavLink to="/addservice">Add Services</NavLink></li>
+                                    </ul>
+                                </li>
                                 <li>
                                     {
                                         (() => {

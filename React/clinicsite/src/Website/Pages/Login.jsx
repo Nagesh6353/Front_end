@@ -49,6 +49,11 @@ function Login() {
                 return false;
             }
 
+            if(user.status === "block"){
+                toast.error("your account has been block..");
+                return false;
+            }
+
             toast.success("Login Successfully..");
             localStorage.setItem("Uid",user.id);
             localStorage.setItem("Uname",user.name);

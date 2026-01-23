@@ -14,7 +14,7 @@ function Header() {
     const logout = () => {
         localStorage.removeItem("Uid");
         localStorage.removeItem("Uname");
-        redirect("/login");
+        redirect("/login")
         toast.success("Logout Successfully..");
     }
 
@@ -68,7 +68,7 @@ function Header() {
                                         (()=>{
                                             if(localStorage.getItem("Uid")){
                                                 return(
-                                                    <Link>Hello, {localStorage.getItem("Uname")}</Link>
+                                                    <Link to="/updateprofile">Hello, {localStorage.getItem("Uname")}</Link>
                                                 )
                                             }
                                         })()
@@ -79,12 +79,13 @@ function Header() {
                                         (()=>{
                                             if(localStorage.getItem("Uid")){
                                                 return(
-                                                    <Link className='btn btn-danger p-1 text-white' onClick={logout}>Logout</Link>
+                                                    // <Link onClick={logout}>Logout</Link>
+                                                    <button className="btn btn-danger" onClick={logout}>Logout</button>  
                                                 )
                                             }
                                             else{
                                                 return(
-                                                    <Link to="login">Login</Link>
+                                                    <Link to="/login">Login</Link>  
                                                 )
                                             }
                                         })()

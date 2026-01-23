@@ -23,6 +23,9 @@ import AddDoctor from './Admin/AdminPages/AddDoctor';
 import { ToastContainer } from 'react-toastify';
 import AdminLogin from './Admin/AdminPages/AdminLogin';
 import Login from './Website/Pages/Login';
+import UpdateProfile from './Website/Pages/UpdateProfile';
+import AddServices from './Admin/AdminPages/AddServices';
+import ServiceManage from './Admin/AdminPages/ServiceManage';
 
 function App() {
   useEffect(() => {
@@ -57,11 +60,14 @@ function App() {
             <Route path='/privacy' element={<Privacy />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/updateprofile' element={<UpdateProfile />} />
             <Route path='*' element={<NotFound />} />
 
             {/* Admin Routes */}
 
             <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/addservice' element={<AddServices />} />
+            <Route path='/servicemanage' element={<ServiceManage />} />
             <Route path='/doctormanage' element={<DoctorManage />} />
             <Route path='/adddoctor' element={<AddDoctor />} />
             <Route path='/adminlogin' element={<AdminLogin />} />
