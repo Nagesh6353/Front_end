@@ -1,0 +1,39 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Fix Login Issue",
+      "description": "Customer unable to login to portal.",
+      "dueDate": "2026-02-25",
+      "priority": "High"
+    },
+    {
+      "id": "2",
+      "title": "Update Website Banner",
+      "description": "Replace homepage banner with new design.",
+      "dueDate": "2026-02-28",
+      "priority": "Medium"
+    },
+    {
+      "id": "3",
+      "title": "Database Backup",
+      "description": "Take weekly database backup.",
+      "dueDate": "2026-03-02",
+      "priority": "Low"
+    },
+    {
+      "id": "4",
+      "title": "Resolve Payment Error",
+      "description": "Fix payment gateway timeout issue.",
+      "dueDate": "2026-02-27",
+      "priority": "High"
+    },
+    {
+      "id": "4082",
+      "title": "Server Maintenance",
+      "description": "Perform scheduled maintenance",
+      "dueDate": "2026-03-05",
+      "priority": "Medium"
+    }
+  ]
+}
